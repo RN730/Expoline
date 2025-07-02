@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expoline Master Background</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Float stays shared for light vertical bounce */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-40px); }
+    }
+
+    /* Pulse shimmer (subtle green glow) */
+    @keyframes pulseSoft {
+      0%, 100% { background-color: #86efac; } /* green-300 */
+      50%      { background-color: #4ade80; } /* green-400 */
+    }
+
+    /* 💫 INDIVIDUAL DRIFT MOTIONS */
+    @keyframes drift1 {
+      0%   { transform: translate(0, 0); }
+      50%  { transform: translate(20px, -15px); }
+      100% { transform: translate(0, 0); }
+    }
+
+    @keyframes drift2 {
+      0%   { transform: translate(0, 0); }
+      50%  { transform: translate(-25px, 10px); }
+      100% { transform: translate(0, 0); }
+    }
+
+    @keyframes drift3 {
+      0%   { transform: translate(0, 0); }
+      50%  { transform: translate(15px, 25px); }
+      100% { transform: translate(0, 0); }
+    }
+
+    @keyframes drift4 {
+      0%   { transform: translate(0, 0); }
+      50%  { transform: translate(-20px, -20px); }
+      100% { transform: translate(0, 0); }
+    }
+
+    @keyframes drift5 {
+      0%   { transform: translate(0, 0); }
+      50%  { transform: translate(30px, -10px); }
+      100% { transform: translate(0, 0); }
+    }
+
+    .animate-float { animation: float 12s ease-in-out infinite; }
+    .animate-pulse-soft { animation: pulseSoft 6s ease-in-out infinite; }
+
+    /* Individual drift classes */
+    .drift-1 { animation: drift1 16s ease-in-out infinite; }
+    .drift-2 { animation: drift2 20s ease-in-out infinite; }
+    .drift-3 { animation: drift3 18s ease-in-out infinite; }
+    .drift-4 { animation: drift4 22s ease-in-out infinite; }
+    .drift-5 { animation: drift5 19s ease-in-out infinite; }
+  </style>
+</head>
+<body class="bg-green-200 text-black overflow-x-hidden">
+
+
+  <!--  Animated Background -->
+  <div class="absolute inset-0 z-0" aria-hidden="true">
+
+    <!-- Each square has unique drift, float, pulse -->
+    <div class="absolute top-[5%] left-[10%] animate-float drift-1">
+      <div class="w-24 h-36 rotate-12 animate-pulse-soft opacity-60"></div>
+    </div>
+
+    <div class="absolute top-[15%] left-[35%] animate-float drift-2">
+      <div class="w-28 h-44 rotate-[18deg] animate-pulse-soft opacity-60"></div>
+    </div>
+
+    <div class="absolute top-[30%] left-[60%] animate-float drift-3">
+      <div class="w-32 h-32 rotate-[-10deg] animate-pulse-soft opacity-60"></div>
+    </div>
+
+    <div class="absolute top-[50%] left-[20%] animate-float drift-4">
+      <div class="w-40 h-24 rotate-6 animate-pulse-soft opacity-60"></div>
+    </div>
+
+    <div class="absolute top-[70%] left-[75%] animate-float drift-5">
+      <div class="w-20 h-20 rotate-[22deg] animate-pulse-soft opacity-60"></div>
+    </div>
+
+    <div class="absolute top-[85%] left-[40%] animate-float drift-2">
+      <div class="w-36 h-14 rotate-[15deg] animate-pulse-soft opacity-60"></div>
+    </div>
+
+    <div class="absolute top-[95%] left-[60%] animate-float drift-3">
+      <div class="w-28 h-48 rotate-[30deg] animate-pulse-soft opacity-60"></div>
+    </div>
+
+    <div class="absolute top-[110%] left-[10%] animate-float drift-4">
+      <div class="w-20 h-20 rotate-[45deg] animate-pulse-soft opacity-60"></div>
+    </div>
+
+    <!-- Deeper Layer (softer opacity) -->
+    <div class="absolute top-[40%] left-[80%] animate-float drift-1">
+      <div class="w-16 h-28 rotate-[-25deg] animate-pulse-soft opacity-50"></div>
+    </div>
+
+    <div class="absolute top-[120%] left-[25%] animate-float drift-5">
+      <div class="w-20 h-36 rotate-[8deg] animate-pulse-soft opacity-50"></div>
+    </div>
+
+    <div class="absolute top-[150%] left-[50%] animate-float drift-3">
+      <div class="w-32 h-32 rotate-[15deg] animate-pulse-soft opacity-50"></div>
+    </div>
+
+  </div>
+
+  <!-- start all frontend code from here -->
+
+<header class="bg-green-100 py-4 px-6 md:px-12 shadow-sm z-50 fixed top-0 left-0 right-0">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    
+    <!-- Logo Section -->
+    <div class="flex items-center gap-2">
+      <img src="images/Logo.png" alt="Expoline Logo" class="w-20 h-20" />
+      <div class="flex flex-col leading-none">
+        <span class="text-xl font-bold italic">EXPOLINE</span>
+        <span class="text-sm italic text-gray-700">Consulting</span>
+      </div>
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex items-center gap-6 bg-white px-6 py-2 rounded-full shadow-inner border-2 border-green-300">
+      <a href="index.html" class="text-black font-medium px-4 py-1 rounded-full hover:bg-green-200 hover:shadow-green-300 hover:shadow-md transition">Home</a>
+      <a href="services.html" class="text-black font-medium px-4 py-1 rounded-full hover:bg-green-200 hover:shadow-green-300 hover:shadow-md transition">Services</a>
+      <a href="pricing.html" class="text-black font-medium px-4 py-1 rounded-full hover:bg-green-200 hover:shadow-green-300 hover:shadow-md transition">Pricing</a>
+      <a href="about.html" class="text-black font-medium px-4 py-1 rounded-full hover:bg-green-200 hover:shadow-green-300 hover:shadow-md transition">About</a>
+    </nav>
+
+    <!-- Contact Us Button -->
+    <a href="contact.html" class="hidden md:inline-block ml-6 bg-white hover:bg-green-100 border border-black text-black font-semibold px-5 py-2 rounded-xl transition-shadow hover:shadow-lg">
+      Contact Us
+    </a>
+
+    <!-- Mobile Menu Icon -->
+    <button id="menu-toggle" class="md:hidden text-3xl text-black z-50 relative">
+      ☰
+    </button>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobile-menu" class="md:hidden overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0 scale-y-95 origin-top bg-white rounded-lg shadow-lg mt-4">
+    <a href="index.html" class="block px-6 py-2 text-black hover:bg-green-200">Home</a>
+    <a href="services.html" class="block px-6 py-2 text-black hover:bg-green-200">Services</a>
+    <a href="pricing.html" class="block px-6 py-2 text-black hover:bg-green-200">Pricing</a>
+    <a href="about.html" class="block px-6 py-2 text-black hover:bg-green-200">About</a>
+    <a href="contact.html" class="block px-6 py-2 text-black hover:bg-green-200">Contact</a>
+  </div>
+</header>
+
+
+<!--  Hero Section -->
+<section class="pt-40 md:pt-40 relative z-10 px-6 py-20 md:py-28 flex flex-col md:flex-row items-center justify-center gap-12 max-w-7xl mx-auto">
+
+
+    <!--  Green Glow Around Card -->
+    <div class="relative z-10 rounded-[2rem] p-1 bg-green-300/20 shadow-[0_0_40px_10px_rgba(74,222,128,0.4)]">
+  <!-- 🌿 Green Glow Wrapper -->
+  <div class="relative z-10 rounded-[3rem] p-1 bg-green-300/20 shadow-[0_0_60px_20px_rgba(74,222,128,0.4)]">
+
+    <!--  White Card Inside -->
+    <div class="bg-white rounded-[2.5rem] p-8 md:p-10 shadow-md border border-gray-200 max-w-md">
+      
+      <!-- Headline -->
+      <h2 class="text-2xl md:text-3xl font-bold text-black mb-4 leading-tight">
+        We Don’t Just Consult. We<br>
+        build <span class="text-green-600">What matters</span>
+      </h2>
+
+      <!-- Body Paragraph -->
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        This isn’t client work. It’s personal. Your<br>
+        business becomes our obsession.
+      </p>
+
+      <!-- Supporting Tagline -->
+      <p class="text-sm text-gray-500 mb-6">
+        Real Relationships. Strategic Outcomes. Long-term<br>
+        Results
+      </p>
+
+      <!-- CTA Button -->
+      <a href="#consultation" class="inline-block px-6 py-2 bg-green-300 text-black font-semibold rounded-xl border border-black hover:bg-green-400 transition">
+        Book a Consultation
+      </a>
+
+    </div>
+  </div>
+  </div>
+  
+
+  <!--  Right Side - Image -->
+  <div>
+    <img src="images/main1.png" alt="Consulting Illustration" class="max-w-sm md:max-w-md" />
+  </div>
+
+</section>
+
+<!--  Services Section -->
+<section class="relative z-10 px-6 py-20 max-w-7xl mx-auto">
+  <div class="bg-white/80 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-lg">
+
+    <!-- Section Title -->
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-black">Services</h2>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <!-- Service Card -->
+      <div class="bg-white rounded-2xl border border-black/30 p-6 shadow-md hover:shadow-lg transition">
+        <div class="flex items-start gap-3">
+          <div class="text-xl font-bold">ℹ️</div>
+          <div>
+            <h3 class="text-lg font-semibold text-black mb-1">Media Consulting</h3>
+            <p class="text-gray-700 mb-4">At our consulting agency we help by guiding brands to grow through smart, targeted media strategies that make an impact.</p>
+            <button class="px-4 py-1 bg-green-300 text-black font-semibold rounded-md border border-black hover:bg-green-400 transition">Learn More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat Card Template for Each Service -->
+      <div class="bg-white rounded-2xl border border-black/30 p-6 shadow-md hover:shadow-lg transition">
+        <div class="flex items-start gap-3">
+          <div class="text-xl font-bold">ℹ️</div>
+          <div>
+            <h3 class="text-lg font-semibold text-black mb-1">Operations Consulting</h3>
+            <p class="text-gray-700 mb-4">We work closely with teams to simplify what's complex, cut the clutter, and build systems that just work—smarter, faster, and leaner.</p>
+            <button class="px-4 py-1 bg-green-300 text-black font-semibold rounded-md border border-black hover:bg-green-400 transition">Learn More</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-black/30 p-6 shadow-md hover:shadow-lg transition">
+        <div class="flex items-start gap-3">
+          <div class="text-xl font-bold">ℹ️</div>
+          <div>
+            <h3 class="text-lg font-semibold text-black mb-1">Digital Optimization Consulting</h3>
+            <p class="text-gray-700 mb-4">We guide brands to elevate their digital presence through smart, data-driven strategies that enhance performance, boost visibility, and create seamless user experiences.</p>
+            <button class="px-4 py-1 bg-green-300 text-black font-semibold rounded-md border border-black hover:bg-green-400 transition">Learn More</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-black/30 p-6 shadow-md hover:shadow-lg transition">
+        <div class="flex items-start gap-3">
+          <div class="text-xl font-bold">ℹ️</div>
+          <div>
+            <h3 class="text-lg font-semibold text-black mb-1">Brand Consulting</h3>
+            <p class="text-gray-700 mb-4">We help brands define and refine their identity through strategic positioning, storytelling, and visuals that resonate with their audience.</p>
+            <button class="px-4 py-1 bg-green-300 text-black font-semibold rounded-md border border-black hover:bg-green-400 transition">Learn More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Full Width Card -->
+      <div class="md:col-span-2 bg-white rounded-2xl border border-black/30 p-6 shadow-md hover:shadow-lg transition">
+        <div class="flex items-start gap-3">
+          <div class="text-xl font-bold">ℹ️</div>
+          <div>
+            <h3 class="text-lg font-semibold text-black mb-1">Business Growth Strategy Consulting</h3>
+            <p class="text-gray-700 mb-4">We craft tailored growth strategies that align with your vision—unlocking new opportunities, scaling operations, and driving sustainable success through clear, actionable plans.</p>
+            <button class="px-4 py-1 bg-green-300 text-black font-semibold rounded-md border border-black hover:bg-green-400 transition">Learn More</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!--  About Us Section -->
+<section class="relative z-10 px-6 py-20 max-w-7xl mx-auto">
+  <div class="bg-white/80 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-lg text-center">
+
+    <!-- Heading -->
+    <h2 class="text-3xl md:text-4xl font-bold text-black mb-12">About Us</h2>
+
+    <!-- Features Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+      
+      <!-- Card 1 -->
+      <div class="bg-green-200 rounded-xl p-4 border border-black/30 shadow-md">
+        <img src="images/index1.png" alt="" class="h-12 mx-auto mb-2">
+        <p class="font-semibold text-black">Relationship-Based<br>Consulting</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-green-200 rounded-xl p-4 border border-black/30 shadow-md">
+        <img src="images/index2.png" alt="" class="h-12 mx-auto mb-2">
+        <p class="font-semibold text-black">Targeted Solutions</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-green-200 rounded-xl p-4 border border-black/30 shadow-md">
+        <img src="images/index3.png" alt="" class="h-12 mx-auto mb-2">
+        <p class="font-semibold text-black">Collaborative Growth<br>Approach</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-green-200 rounded-xl p-4 border border-black/30 shadow-md">
+        <img src="images/index4.png" alt="" class="h-12 mx-auto mb-2">
+        <p class="font-semibold text-black">Clarity Through<br>Insight</p>
+      </div>
+    </div>
+
+    <!-- Description -->
+    <p class="text-gray-700 max-w-3xl mx-auto mb-8">
+      We get it—trusting a company can be tough. That’s why we lead with honesty, clear communication, and real results. Our mission is simple: build lasting partnerships through trust and professionalism.
+    </p>
+
+    <!-- CTA Button -->
+    <a href="#about" class="inline-block px-8 py-2 bg-green-300 text-black font-semibold rounded-full border border-black hover:bg-green-400 transition">
+      Learn More
+    </a>
+
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="border-t border-white mt-12 bg-green-200 text-black py-12 px-6">
+
+
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-10">
+
+    <!-- Glowing Left Section -->
+<div class="bg-white/70 backdrop-blur-md rounded-2xl p-6 shadow-lg">
+  <div class="flex items-center gap-3 mb-4">
+    <img src="images/Logo.png" alt="Logo" class="h-28" />
+    <div>
+      <h3 class="text-xl font-extrabold italic">EXPOLINE</h3>
+      <p class="text-sm font-semibold italic">Consulting</p>
+    </div>
+  </div>
+  <p class="text-sm leading-relaxed mb-4">
+    Just because you’re small doesn’t mean you should play small. We craft strategies that turn ambition into results — helping you grow, connect, and thrive.
+  </p>
+  <a href="#get-started" class="px-5 py-2 bg-green-300 text-black font-semibold rounded-full border border-black hover:bg-green-400 transition">
+    Get Started
+  </a>
+</div>
+
+
+    <!--  Quick Links & Social -->
+    <div class="flex flex-col items-center justify-center gap-6">
+      <div>
+        <h4 class="font-bold text-lg mb-2">Quick Links</h4>
+        <ul class="space-y-1 text-sm text-black/80">
+          <li><a href="#services" class="hover:underline">Services</a></li>
+          <li><a href="#pricing" class="hover:underline">Pricing</a></li>
+          <li><a href="#about" class="hover:underline">About</a></li>
+          <li><a href="#contact" class="hover:underline">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-lg mb-2">Connect With Us</h4>
+        <div class="flex gap-4">
+          <a href="#"><img src="/assets/icons/linkedin.svg" class="h-6 w-6" alt="LinkedIn"></a>
+          <a href="#"><img src="/assets/icons/instagram.svg" class="h-6 w-6" alt="Instagram"></a>
+          <a href="#"><img src="/assets/icons/facebook.svg" class="h-6 w-6" alt="Facebook"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 📞 Contact Info -->
+    <div class="bg-white/70 backdrop-blur-md rounded-2xl p-6 flex flex-col gap-4 text-left shadow-md">
+      <h4 class="font-bold text-lg mb-2">Contact Us</h4>
+      <div class="flex items-center gap-3 text-sm">
+        <img src="/assets/icons/phone.svg" class="h-5" alt="Phone">
+        <span>xxx-xxx-xxxx</span>
+      </div>
+      <div class="flex items-center gap-3 text-sm">
+        <img src="/assets/icons/email.svg" class="h-5" alt="Email">
+        <span>johndoe@gmail.com</span>
+      </div>
+      <div class="flex items-center gap-3 text-sm">
+        <img src="/assets/icons/location.svg" class="h-5" alt="Location">
+        <span>Jamaica, NY</span>
+      </div>
+    </div>
+  </div>
+
+  <!--  Bottom Bar -->
+  <div class="border-t border-black/20 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-black/60 gap-3">
+    <p>© Copyright 2025 Expoline Consulting | All Rights Reserved</p>
+    <div class="flex gap-4">
+      <a href="#" class="hover:underline">Privacy Policy</a>
+      <a href="#" class="hover:underline">Terms of Service</a>
+    </div>
+  </div>
+
+</footer>
+
+
+</body>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleBtn = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+
+    toggleBtn.addEventListener('click', () => {
+      const isOpen = menu.classList.contains('max-h-96');
+
+      if (isOpen) {
+        menu.classList.remove('max-h-96', 'opacity-100', 'scale-y-100');
+        menu.classList.add('max-h-0', 'opacity-0', 'scale-y-95');
+      } else {
+        menu.classList.remove('max-h-0', 'opacity-0', 'scale-y-95');
+        menu.classList.add('max-h-96', 'opacity-100', 'scale-y-100');
+      }
+    });
+  });
+</script>
+
+
+
+</html>
